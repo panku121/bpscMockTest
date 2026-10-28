@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BPSC TRE · कम्प्यूटर विज्ञान मॉक टेस्ट</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;600;700&family=Source+Serif+4:opsz,wght@8..60,520;8..60,650&display=swap" />
+  <link rel="stylesheet" href="css/exam.css" />
+</head>
+<body>
+  <header class="topbar" id="site-top">
+    <div class="topbar-inner">
+      <div>
+        <p class="eyebrow">Bihar Public Service Commission · TRE pattern</p>
+        <h1>कम्प्यूटर विज्ञान मॉक टेस्ट सीरीज</h1>
+        <p class="sub">कक्षा 11–12 · भाषा + सामान्य अध्ययन + विषय</p>
+      </div>
+      <div class="pattern">
+        <span class="chip">150 प्रश्न</span>
+        <span class="chip">2 घंटे 30 मिनट</span>
+        <span class="chip">150 अंक</span>
+        <span class="chip">नेगेटिव मार्किंग नहीं</span>
+      </div>
+    </div>
+  </header>
+
+  <main id="view-home" class="wrap">
+    <p class="lead">यह सीरीज आपके दिए हुए TRE पेपरों के पैटर्न पर बनी है — <strong>अंग्रेज़ी 8, हिंदी 22, सामान्य अध्ययन 40, कम्प्यूटर विज्ञान 80</strong>। हर सवाल के पाँच विकल्प हैं, जिनमें “एक से अधिक” और “कोई नहीं” भी शामिल हैं। भाषा का भाग क्वालीफाइंग है: 30 में से कम से कम 9। मेरिट सामान्य अध्ययन और कम्प्यूटर विज्ञान के 120 अंकों पर बनती है। परीक्षा खत्म होने पर जिन टॉपिक में गलती ज्यादा होगी, वही पढ़ने और अभ्यास का सुझाव मिलेगा।</p>
+    <div id="resume-box"></div>
+    <div id="set-grid" class="grid"></div>
+    <section class="panel" style="margin-top:18px">
+      <h2>टॉपिक अभ्यास</h2>
+      <p>पूरा पेपर देने से पहले या कमजोर टॉपिक पकड़ने के बाद, 20 सवालों का छोटा अभ्यास।</p>
+      <div id="topic-pick" class="topic-pick"></div>
+    </section>
+  </main>
+
+  <main id="view-instructions" class="wrap hidden">
+    <article class="panel">
+      <h2 id="instr-title">परीक्षा निर्देश</h2>
+      <ol class="rules">
+        <li>यह प्रश्न-पत्र तीन भागों में है। Part I भाषा (प्रश्न 1–30) क्वालीफाइंग है। अंग्रेज़ी प्रश्न 1–8 सभी के लिए हैं। हिंदी प्रश्न 9–30।</li>
+        <li>Part II सामान्य अध्ययन प्रश्न 31–70 और Part III कम्प्यूटर विज्ञान प्रश्न 71–150। ये दोनों हिंदी और अंग्रेज़ी में हैं। अंतर हो तो अंग्रेज़ी रूप मानक माना जाता है।</li>
+        <li>हर प्रश्न के पाँच विकल्प हैं: (A) से (E)। केवल एक चुनें। (D) प्रायः “उपर्युक्त में से एक से अधिक” और (E) “उपर्युक्त में से कोई नहीं” होता है।</li>
+        <li>सभी प्रश्न समान अंक के हैं। गलत उत्तर पर अंक नहीं कटते। खाली छोड़ा प्रश्न शून्य है।</li>
+        <li>भाषा में 30% से कम (9 से कम) आने पर मेरिट के लिए अयोग्य माना जाएगा, भले ही विषय में अंक अच्छे हों।</li>
+        <li>समय 2 घंटे 30 मिनट है। समय समाप्त होते ही उत्तर अपने आप जमा हो जाएँगे। बीच में ब्राउज़र बंद करने पर यही डिवाइस पर प्रयास बचा रहता है।</li>
+        <li>सवालों के बीच स्वतंत्र घूम सकते हैं। Mark for review से सवाल बाद के लिए चिह्नित करें।</li>
+      </ol>
+      <div class="form-row">
+        <label>नाम<input id="cand-name" type="text" maxlength="60" placeholder="अपना नाम" /></label>
+        <label>अनुक्रमांक<input id="cand-roll" type="text" maxlength="20" placeholder="रोल नंबर" /></label>
+      </div>
+      <label class="check"><input id="agree" type="checkbox" /> मैंने निर्देश पढ़ लिए हैं और परीक्षा शुरू करना चाहता/चाहती हूँ।</label>
+      <div class="actions" style="margin-top:14px">
+        <button class="btn ghost" id="back-home" type="button">वापस</button>
+        <button class="btn" id="begin-exam" type="button">परीक्षा शुरू करें</button>
+      </div>
+    </article>
+  </main>
+
+  <div id="view-exam" class="hidden">
+    <div class="exam-bar">
+      <div class="exam-title" id="exam-title">Mock Test</div>
+      <div class="timer" id="timer">02:30:00</div>
+      <div class="exam-tools">
+        <div class="seg" id="lang-seg">
+          <button type="button" data-lang="both" class="active">दोनों</button>
+          <button type="button" data-lang="en">EN</button>
+          <button type="button" data-lang="hi">हि</button>
+        </div>
+        <button type="button" id="font-dec" aria-label="छोटा अक्षर">A−</button>
+        <button type="button" id="font-inc" aria-label="बड़ा अक्षर">A+</button>
+        <button type="button" id="open-palette">प्रश्न पत्र</button>
+        <button type="button" id="open-rough">रफ</button>
+      </div>
+    </div>
+    <div class="exam-layout">
+      <section class="sheet" id="sheet"></section>
+      <aside class="palette" id="palette"></aside>
+    </div>
+    <div class="footer-nav">
+      <button class="btn ghost" id="btn-prev" type="button">पिछला</button>
+      <button class="btn ghost" id="btn-clear" type="button">साफ</button>
+      <button class="btn secondary" id="btn-mark" type="button">समीक्षा चिह्न</button>
+      <button class="btn" id="btn-next" type="button">सहेजें और अगला</button>
+      <button class="btn warn" id="btn-submit" type="button">जमा करें</button>
+    </div>
+  </div>
+
+  <main id="view-result" class="wrap hidden"></main>
+
+  <div id="modal-root"></div>
+
+  <script src="data/papers.js"></script>
+  <script src="js/guide.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
